@@ -1,7 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+var selectSum = 0;
 Page({
   data: {
     teachers: [
@@ -51,12 +51,17 @@ Page({
     })
   },
   test: function(e){
-    // console.log(index);
-    // this.teachers[index].flag = true;
-    console.log(e.target.id);
-    var teacherFlag = "teachers[" + e.target.id + "].flag";
+    if(!this.data.teachers[e.target.id].flag && selectSum == 2){
+      return;
+    }
+    let teacherFlag = "teachers[" + e.target.id + "].flag";
     this.setData({
       [teacherFlag] : !this.data.teachers[e.target.id].flag
     })
+    if(this.data.teachers[e.target.id].flag)
+      selectSum ++;
+    else
+      selectSum --;
+    console.log(selectSum);
   }
 })
