@@ -13,7 +13,7 @@
   font-size: 12px;
   margin-left: 15px;
 }
-.select{
+.active{
   border-color: orange;
   color: orange;
 }

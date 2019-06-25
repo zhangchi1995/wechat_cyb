@@ -4,7 +4,9 @@ const app = getApp()
 
 Page({
   data: {
-    teachers: ["张三","李四","王五"]  
+    teachers: [
+      {name:"张三",flag:false},{name:"李四",flag:false},{name:"王五",flag:false}
+      ]  
   },
   //事件处理函数
   bindViewTap: function() {
@@ -48,7 +50,13 @@ Page({
       hasUserInfo: true
     })
   },
-  test: function(){
-    console.log('ok');
+  test: function(e){
+    // console.log(index);
+    // this.teachers[index].flag = true;
+    console.log(e.target.id);
+    var teacherFlag = "teachers[" + e.target.id + "].flag";
+    this.setData({
+      [teacherFlag] : !this.data.teachers[e.target.id].flag
+    })
   }
 })
