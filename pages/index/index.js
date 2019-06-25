@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    
+    teachers: ["张三","李四","王五"]  
   },
   //事件处理函数
   bindViewTap: function() {

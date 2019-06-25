@@ -1,5 +1,3 @@
 <view class='lable'>
-  <view class='test' hover-class='select' bindtap='test'>张三</view>
-  <view class='test' hover-class='select'>李四</view>
-  <view class='test' hover-class='select'>王五</view>
+  <view class='test' wx:for="{{ teachers }}">{{ item }}</view>
 </view>
