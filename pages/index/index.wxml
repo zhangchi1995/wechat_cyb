@@ -1,0 +1,3 @@
+<view class='lable'>
+  <view data-flag='{{ item.flag }}' id='{{index}}' class='test {{ item.flag ? "active" : " " }}' bindtap='test' wx:for="{{ teachers }}" wx:key="{{index}}">{{ item.name }}</view>
+</view>
