@@ -9,5 +9,24 @@
     "navigationBarTitleText": "选择指导教师",
     "navigationBarTextStyle": "black"
   },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#d81e06",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "static/img/首页被选中.png",
+        "iconPath": "static/img/首页.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "static/img/记录被选中.png",
+        "iconPath": "static/img/记录.png",
+        "pagePath": "pages/index/index",
+        "text": "我的填报"
+      }
+    ]
+  },
   "sitemapLocation": "sitemap.json"
 }

@@ -2,6 +2,10 @@
   <icon class="search-icon"></icon>
   <input type='text' class='search-input' placeholder="输入导师姓名搜索"></input>
 </view>
+<view class="title">
+  <text>全部教师列表 ↓</text>
+  <text>已选择  {{ selectSum }} / {{ maxSelectSum }}</text>
+</view>
 <view class='lable'>
   <view data-flag='{{ item.flag }}' id='{{index}}' class='teacher-card {{ item.flag ? "active" : " " }}' bindtap='test' wx:for="{{ teachers }}" wx:key="{{index}}">{{ item.name }}</view>
 </view>

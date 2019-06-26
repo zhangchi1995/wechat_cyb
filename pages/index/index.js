@@ -1,12 +1,21 @@
 //index.js
 //获取应用实例
 const app = getApp()
-var selectSum = 0;
 Page({
   data: {
     teachers: [
-      {name:"张三",flag:false},{name:"李四",flag:false},{name:"王五",flag:false}
-      ]  
+      { name: "张三", flag: false },
+      { name: "李四", flag: false },
+      { name: "王五", flag: false },
+      { name: "马超", flag: false },
+      { name: "刘备", flag: false },
+      { name: "吕蒙", flag: false },
+      { name: "张机", flag: false },
+      { name: "关银屏", flag: false },
+      { name: "诸葛连弩", flag: false }
+      ],
+      selectSum: 0,
+      maxSelectSum: 5
   },
   //事件处理函数
   bindViewTap: function() {
@@ -51,17 +60,22 @@ Page({
     })
   },
   test: function(e){
-    if(!this.data.teachers[e.target.id].flag && selectSum == 2){
+    if(!this.data.teachers[e.target.id].flag && this.data.selectSum == this.data.maxSelectSum){
       return;
     }
     let teacherFlag = "teachers[" + e.target.id + "].flag";
     this.setData({
       [teacherFlag] : !this.data.teachers[e.target.id].flag
     })
-    if(this.data.teachers[e.target.id].flag)
-      selectSum ++;
-    else
-      selectSum --;
-    console.log(selectSum);
+    let selectSum = this.data.selectSum;
+    if(this.data.teachers[e.target.id].flag){
+      this.setData({
+        selectSum : selectSum + 1
+      })
+    }else{
+      this.setData({
+        selectSum: selectSum - 1
+      })
+    }
   }
 })
