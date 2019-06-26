@@ -6,13 +6,13 @@
 }
 .teacher-card{
   display: flex;
-  width: 50px;
+  width: 70px;
   border: 1px solid gray;
   padding: 0px 3px 0px 3px;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
-  height: 20px;
+  height: 30px;
   font-size: 12px;
   margin-left: 15px;
   margin-top: 20px;
@@ -53,5 +53,5 @@
   margin: 0 auto;
   height: 20px;
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 14px;
 }

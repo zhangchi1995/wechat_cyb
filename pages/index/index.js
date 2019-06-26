@@ -4,15 +4,15 @@ const app = getApp()
 Page({
   data: {
     teachers: [
-      { name: "张三", flag: false },
-      { name: "李四", flag: false },
-      { name: "王五", flag: false },
-      { name: "马超", flag: false },
-      { name: "刘备", flag: false },
-      { name: "吕蒙", flag: false },
-      { name: "张机", flag: false },
-      { name: "关银屏", flag: false },
-      { name: "诸葛连弩", flag: false }
+      { name: "张三", flag: false , isDisplay: true},
+      { name: "李四", flag: false , isDisplay: true},
+      { name: "王五", flag: false , isDisplay: true},
+      { name: "马超", flag: false , isDisplay: true},
+      { name: "刘备", flag: false , isDisplay: true},
+      { name: "吕蒙", flag: false , isDisplay: true},
+      { name: "张机", flag: false , isDisplay: true},
+      { name: "关银屏", flag: false , isDisplay: true},
+      { name: "诸葛连弩", flag: false , isDisplay: true}
       ],
       selectSum: 0,
       maxSelectSum: 5
@@ -59,7 +59,8 @@ Page({
       hasUserInfo: true
     })
   },
-  test: function(e){
+  //选中教师卡
+  select: function(e){
     if(!this.data.teachers[e.target.id].flag && this.data.selectSum == this.data.maxSelectSum){
       return;
     }
@@ -77,5 +78,9 @@ Page({
         selectSum: selectSum - 1
       })
     }
+  },
+  //搜索框
+  searchName: function(e){
+    
   }
 })

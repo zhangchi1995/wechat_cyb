@@ -1,11 +1,11 @@
 <view class="search">
   <icon class="search-icon"></icon>
-  <input type='text' class='search-input' placeholder="输入导师姓名搜索"></input>
+  <input type='text' class='search-input' placeholder="输入导师姓名搜索" bindinput="searchName"></input>
 </view>
 <view class="title">
-  <text>全部教师列表 ↓</text>
-  <text>已选择  {{ selectSum }} / {{ maxSelectSum }}</text>
+  <text>全部导师列表 ↓</text>
+  <text style="{{ selectSum==maxSelectSum ? 'color:red' : ' '}}">已选择  {{ selectSum }} / {{ maxSelectSum }}</text>
 </view>
 <view class='lable'>
-  <view data-flag='{{ item.flag }}' id='{{index}}' class='teacher-card {{ item.flag ? "active" : " " }}' bindtap='test' wx:for="{{ teachers }}" wx:key="{{index}}">{{ item.name }}</view>
+  <view wx:if="{{ item.isDisplay }}" data-flag='{{ item.flag }}' data-display="{{ item.isDisplay }}" id='{{index}}' class='teacher-card {{ item.flag ? "active" : " " }}' bindtap='select' wx:for="{{ teachers }}" wx:key="{{index}}">{{ item.name }}</view>
 </view>
