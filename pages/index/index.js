@@ -81,6 +81,22 @@ Page({
   },
   //搜索框
   searchName: function(e){
-    
+    // let selectSum = this.data.selectSum;
+    // this.setData({
+    //   selectSum : selectSum + 1
+    // })
+    let re = RegExp(e.detail.value);
+    for(let i = 0 ; i < this.data.teachers.length ; i ++){
+      let teacherIsDisplay = "teachers[" + i + "].isDisplay";
+      if(re.test(this.data.teachers[i].name)){
+        this.setData({
+          [teacherIsDisplay]: true
+        })
+      }else{
+        this.setData({
+          [teacherIsDisplay]: false
+        })
+      }
+    }
   }
 })

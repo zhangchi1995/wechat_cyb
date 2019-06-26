@@ -1,6 +1,7 @@
 .lable{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0 auto;
   width: 90%;
 }
@@ -14,7 +15,6 @@
   border-radius: 5px;
   height: 30px;
   font-size: 12px;
-  margin-left: 15px;
   margin-top: 20px;
 }
 .active{
