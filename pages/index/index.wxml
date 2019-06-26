@@ -1,3 +1,7 @@
+<view class="search">
+  <icon class="search-icon"></icon>
+  <input type='text' class='search-input' placeholder="输入导师姓名搜索"></input>
+</view>
 <view class='lable'>
-  <view data-flag='{{ item.flag }}' id='{{index}}' class='test {{ item.flag ? "active" : " " }}' bindtap='test' wx:for="{{ teachers }}" wx:key="{{index}}">{{ item.name }}</view>
+  <view data-flag='{{ item.flag }}' id='{{index}}' class='teacher-card {{ item.flag ? "active" : " " }}' bindtap='test' wx:for="{{ teachers }}" wx:key="{{index}}">{{ item.name }}</view>
 </view>

@@ -1,7 +1,8 @@
 .lable{
   display: flex;
+  margin-top: 30px;
 }
-.test{
+.teacher-card{
   display: flex;
   width: 45px;
   border: 1px solid gray;
@@ -16,4 +17,29 @@
 .active{
   border-color: orange;
   color: orange;
+}
+.search{
+  display: flex;
+  /* border: 1px solid #000000; */
+  background-color: #2931;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10px;
+  border-radius: 15px;
+}
+.search-icon{
+  width: 30px;
+  height: 30px;
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-position: left center;
+  /* padding-left: 30px; */
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABjElEQVQ4T62UTVLCQBCF30thsQ2cAKuErXoDOIF4AnEpLIAbeAOyIS7lBnID8QZZE6vAC2C2Is6zBiQCJsRCZzk/X7/uftPEPy/+Mw+JQLc3cZH/uHCokg1ojCIAT1GrEmQJ+AF0/ec6pXtQLxSHSwBVEmj3H8z8qBt1j22AxLUFdPvjBklPRD26KY82X1jVTv7dk3Cq+VEtDRoD3btJydFiYqTzfakV+uGQ4HTWOukkSYyBxf6zBxp31qw09tUpDvyWKySpjIEFPxyJuN1NNQle8MeByE7S3W+FfihD1H4HDEcChlGz7O0GPFBhejYbCscDyInSir1Wsur24tVk1dAWm1oEkqqZXaaitOZt+9APO4TaEi6ToCsnqA3AmzXL3b22iVP6MjeARxKBEacOdCaoDvCF0BTgFaTBrFW5Tm3K7q9AftGgUAXhUgyMo+HaAUV/PEiDHjxtXD/sOEDP2kdvueu1yQ8G2ozs33fIewGj12a5tpwjWeMo69xOJ0Cltcn/DPxVU7JU7Tv/BFLj0hU1owXVAAAAAElFTkSuQmCC");
+  margin-left: 5px;
+}
+.search-input{
+  opacity: 1;
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
 }
