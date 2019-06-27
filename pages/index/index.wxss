@@ -1,9 +1,16 @@
+.scroll-lable{
+  width: 670rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  height: 400rpx;
+}
 .lable{
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   margin: 0 auto;
   width: 670rpx;
+  margin-top: 20rpx;
 }
 .teacher-card{
   display: flex;
@@ -73,10 +80,12 @@
 .selectedView text{
   width: 100%;
   height: 40rpx;
+  margin-bottom: 20rpx;
 }
 .selectedView view{
   width: 100%;
-  height: 40rpx;
+  height: 80rpx;
+  line-height: 80rpx;
   margin-left: 40rpx;
 }
 .selectedView text text{

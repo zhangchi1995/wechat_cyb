@@ -16,6 +16,8 @@
   <text bindtap="selectList">{{ isSelectedValue }} <text>▼</text></text>
   <text style="{{ selectSum==maxSelectSum ? 'color:red' : ' '}}">已选择  {{ selectSum }} / {{ maxSelectSum }}</text>
 </view>
-<view class='lable'> 
-  <view wx:if="{{ item.isDisplay && (item.department == isSelectedValue || isSelectedValue == '全部导师列表') }}" data-flag='{{ item.flag }}' data-display="{{ item.isDisplay }}" id='{{index}}' class='teacher-card {{ item.flag ? "active" : " " }}' bindtap='select' wx:for="{{ teachers }}" wx:key="{{index}}">{{ item.name }}</view>
-</view>
+<scroll-view class="scroll-lable" scroll-y="true">
+  <view class='lable'> 
+    <view wx:if="{{ item.isDisplay && (item.department == isSelectedValue || isSelectedValue == '全部导师列表') }}" data-flag='{{ item.flag }}' data-display="{{ item.isDisplay }}" id='{{index}}' class='teacher-card {{ item.flag ? "active" : " " }}' bindtap='select' wx:for="{{ teachers }}" wx:key="{{index}}">{{ item.name }}</view>
+  </view>
+</scroll-view>
