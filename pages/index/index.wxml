@@ -1,11 +1,21 @@
+<view wx:if='{{ isSelected }}' class="cover"></view>
+<view wx:if='{{ isSelected }}' class='selectedView'>
+  <text>全部导师列表 <text>▼</text></text>
+  <view class="department">全部导师列表</view>
+  <view class="department">基础教研室</view>
+  <view class="department">计应教研室</view>
+  <view class="department">信管教研室</view>
+  <view class="department">网络教研室</view>
+  <view class="department">实验室</view>
+</view>
 <view class="search">
   <icon class="search-icon"></icon>
   <input type='text' class='search-input' placeholder="输入导师姓名搜索" bindinput="searchName"></input>
 </view>
 <view class="title">
-  <text>全部导师列表 ↓</text>
+  <text bindtap="selectList">全部导师列表 <text>▼</text></text>
   <text style="{{ selectSum==maxSelectSum ? 'color:red' : ' '}}">已选择  {{ selectSum }} / {{ maxSelectSum }}</text>
 </view>
-<view class='lable'>
+<view class='lable'> 
   <view wx:if="{{ item.isDisplay }}" data-flag='{{ item.flag }}' data-display="{{ item.isDisplay }}" id='{{index}}' class='teacher-card {{ item.flag ? "active" : " " }}' bindtap='select' wx:for="{{ teachers }}" wx:key="{{index}}">{{ item.name }}</view>
 </view>

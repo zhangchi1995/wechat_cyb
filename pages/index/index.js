@@ -12,10 +12,29 @@ Page({
       { name: "吕蒙", flag: false , isDisplay: true},
       { name: "张机", flag: false , isDisplay: true},
       { name: "关银屏", flag: false , isDisplay: true},
-      { name: "诸葛连弩", flag: false , isDisplay: true}
+      { name: "诸葛连弩", flag: false, isDisplay: true },
+      { name: "张三", flag: false, isDisplay: true },
+      { name: "李四", flag: false, isDisplay: true },
+      { name: "王五", flag: false, isDisplay: true },
+      { name: "马超", flag: false, isDisplay: true },
+      { name: "刘备", flag: false, isDisplay: true },
+      { name: "吕蒙", flag: false, isDisplay: true },
+      { name: "张机", flag: false, isDisplay: true },
+      { name: "关银屏", flag: false, isDisplay: true },
+      { name: "诸葛连弩", flag: false, isDisplay: true },
+      { name: "张三", flag: false, isDisplay: true },
+      { name: "李四", flag: false, isDisplay: true },
+      { name: "王五", flag: false, isDisplay: true },
+      { name: "马超", flag: false, isDisplay: true },
+      { name: "刘备", flag: false, isDisplay: true },
+      { name: "吕蒙", flag: false, isDisplay: true },
+      { name: "张机", flag: false, isDisplay: true },
+      { name: "关银屏", flag: false, isDisplay: true },
+      { name: "诸葛连弩", flag: false, isDisplay: true }
       ],
       selectSum: 0,
-      maxSelectSum: 5
+      maxSelectSum: 5,
+      isSelected: false
   },
   //事件处理函数
   bindViewTap: function() {
@@ -81,10 +100,6 @@ Page({
   },
   //搜索框
   searchName: function(e){
-    // let selectSum = this.data.selectSum;
-    // this.setData({
-    //   selectSum : selectSum + 1
-    // })
     let re = RegExp(e.detail.value);
     for(let i = 0 ; i < this.data.teachers.length ; i ++){
       let teacherIsDisplay = "teachers[" + i + "].isDisplay";
@@ -98,5 +113,11 @@ Page({
         })
       }
     }
+  },
+  selectList: function(e){
+    let isSelected = this.data.isSelected;
+    this.setData({
+      isSelected : true
+    })
   }
 })
