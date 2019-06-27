@@ -16,21 +16,7 @@ Page({
       { name: "孙权", flag: false, isDisplay: true, department: "计应教研室" },
       { name: "貂蝉", flag: false, isDisplay: true, department: "网络教研室" },
       { name: "马岱", flag: false, isDisplay: true, department: "信管教研室" },
-      { name: "凌统", flag: false, isDisplay: true, department: "实验室" },
-      { name: "张三", flag: false, isDisplay: true, department: "基础教研室" },
-      { name: "李四", flag: false, isDisplay: true, department: "基础教研室" },
-      { name: "王五", flag: false, isDisplay: true, department: "实验室" },
-      { name: "马超", flag: false, isDisplay: true, department: "网络教研室" },
-      { name: "刘备", flag: false, isDisplay: true, department: "网络教研室" },
-      { name: "吕蒙", flag: false, isDisplay: true, department: "信管教研室" },
-      { name: "张机", flag: false, isDisplay: true, department: "信管教研室" },
-      { name: "关银屏", flag: false, isDisplay: true, department: "计应教研室" },
-      { name: "诸葛连弩", flag: false, isDisplay: true, department: "计应教研室" },
-      { name: "孙权", flag: false, isDisplay: true, department: "计应教研室" },
-      { name: "貂蝉", flag: false, isDisplay: true, department: "网络教研室" },
-      { name: "马岱", flag: false, isDisplay: true, department: "信管教研室" },
-      { name: "凌统", flag: false, isDisplay: true, department: "实验室" },
-      { name: "吕布", flag: false, isDisplay: true, department: "计应教研室" }
+      { name: "凌统", flag: false, isDisplay: true, department: "实验室" }
       ],
       selectSum: 0,
       maxSelectSum: 5,
@@ -81,15 +67,15 @@ Page({
   },
   //选中教师卡
   select: function(e){
-    if(!this.data.teachers[e.target.id].flag && this.data.selectSum == this.data.maxSelectSum){
+    if (!this.data.teachers[e.currentTarget.id].flag && this.data.selectSum == this.data.maxSelectSum){
       return;
     }
-    let teacherFlag = "teachers[" + e.target.id + "].flag";
+    let teacherFlag = "teachers[" + e.currentTarget.id + "].flag";
     this.setData({
-      [teacherFlag] : !this.data.teachers[e.target.id].flag
+      [teacherFlag]: !this.data.teachers[e.currentTarget.id].flag
     })
     let selectSum = this.data.selectSum;
-    if(this.data.teachers[e.target.id].flag){
+    if (this.data.teachers[e.currentTarget.id].flag){
       this.setData({
         selectSum : selectSum + 1
       })
