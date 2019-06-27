@@ -4,37 +4,25 @@ const app = getApp()
 Page({
   data: {
     teachers: [
-      { name: "张三", flag: false , isDisplay: true},
-      { name: "李四", flag: false , isDisplay: true},
-      { name: "王五", flag: false , isDisplay: true},
-      { name: "马超", flag: false , isDisplay: true},
-      { name: "刘备", flag: false , isDisplay: true},
-      { name: "吕蒙", flag: false , isDisplay: true},
-      { name: "张机", flag: false , isDisplay: true},
-      { name: "关银屏", flag: false , isDisplay: true},
-      { name: "诸葛连弩", flag: false, isDisplay: true },
-      { name: "张三", flag: false, isDisplay: true },
-      { name: "李四", flag: false, isDisplay: true },
-      { name: "王五", flag: false, isDisplay: true },
-      { name: "马超", flag: false, isDisplay: true },
-      { name: "刘备", flag: false, isDisplay: true },
-      { name: "吕蒙", flag: false, isDisplay: true },
-      { name: "张机", flag: false, isDisplay: true },
-      { name: "关银屏", flag: false, isDisplay: true },
-      { name: "诸葛连弩", flag: false, isDisplay: true },
-      { name: "张三", flag: false, isDisplay: true },
-      { name: "李四", flag: false, isDisplay: true },
-      { name: "王五", flag: false, isDisplay: true },
-      { name: "马超", flag: false, isDisplay: true },
-      { name: "刘备", flag: false, isDisplay: true },
-      { name: "吕蒙", flag: false, isDisplay: true },
-      { name: "张机", flag: false, isDisplay: true },
-      { name: "关银屏", flag: false, isDisplay: true },
-      { name: "诸葛连弩", flag: false, isDisplay: true }
+      { name: "张三", flag: false , isDisplay: true, department: "基础教研室"},
+      { name: "李四", flag: false, isDisplay: true, department: "基础教研室"},
+      { name: "王五", flag: false, isDisplay: true, department: "实验室"},
+      { name: "马超", flag: false, isDisplay: true, department: "网络教研室"},
+      { name: "刘备", flag: false, isDisplay: true, department: "网络教研室"},
+      { name: "吕蒙", flag: false, isDisplay: true, department: "信管教研室"},
+      { name: "张机", flag: false, isDisplay: true, department: "信管教研室"},
+      { name: "关银屏", flag: false, isDisplay: true, department: "计应教研室"},
+      { name: "诸葛连弩", flag: false, isDisplay: true, department: "计应教研室" },
+      { name: "孙权", flag: false, isDisplay: true, department: "计应教研室" },
+      { name: "貂蝉", flag: false, isDisplay: true, department: "网络教研室" },
+      { name: "马岱", flag: false, isDisplay: true, department: "信管教研室" },
+      { name: "凌统", flag: false, isDisplay: true, department: "实验室" },
+      { name: "吕布", flag: false, isDisplay: true, department: "计应教研室" }
       ],
       selectSum: 0,
       maxSelectSum: 5,
-      isSelected: false
+      isSelected: false,
+      isSelectedValue: '全部导师列表'
   },
   //事件处理函数
   bindViewTap: function() {
@@ -117,7 +105,15 @@ Page({
   selectList: function(e){
     let isSelected = this.data.isSelected;
     this.setData({
-      isSelected : true
+      isSelected : !isSelected
+    })
+  },
+  changeDepartment: function(e){
+    let isSelected = this.data.isSelected;
+    let isSelectedValue = this.data.isSelectedValue;
+    this.setData({
+      isSelected : false,
+      isSelectedValue : e.target.dataset.text
     })
   }
 })

@@ -43,9 +43,9 @@
 .search-input{
   opacity: 1;
   font-size: 14px;
-  height: 30px;
+  height: 40px;
   width: 100%;
-  line-height: 30px;
+  line-height: 40px;
 }
 .title{
   display: flex;
@@ -79,6 +79,9 @@
   height: 40rpx;
   margin-left: 40rpx;
 }
+.selectedView text text{
+  color: red;
+}
 .cover{
   position: absolute;
   width: 100%;
@@ -86,4 +89,7 @@
   background-color: gray;
   opacity: 0.8;
   z-index: 998;
+}
+.selectActive{
+  color: red
 }
