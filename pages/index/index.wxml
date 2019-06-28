@@ -26,8 +26,8 @@
 
 <!-- 长条形选择 -->
 <view class='lable'>
-  <view id='{{ index }}' wx:for='{{ teachers }}' class='teacher-lable' wx:key='{{ index }}'  bindtap='select'>
-    <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1561662409639&di=7f57d343d6f30dfd085a0d4639a5b6be&imgtype=0&src=http%3A%2F%2Fn1.itc.cn%2Fimg8%2Fwb%2Frecom%2F2016%2F03%2F14%2F145794449150725558.JPEG' mode='aspectFit'></image>
+  <view wx:if="{{ item.isDisplay && (item.department == isSelectedValue || isSelectedValue == '全部导师列表') }}" data-display='{{ item.isDisplay }}' id='{{ index }}' wx:for='{{ teachers }}' class='teacher-lable' wx:key='{{ index }}'  bindtap='select'>
+    <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1561662409639&di=7f57d343d6f30dfd085a0d4639a5b6be&imgtype=0&src=http%3A%2F%2Fn1.itc.cn%2Fimg8%2Fwb%2Frecom%2F2016%2F03%2F14%2F145794449150725558.JPEG' mode='aspectFit' class='{{ item.flag ? "active" : " " }}'></image>
     <view class='teacher-message {{ item.flag ? "active" : " " }}' data-flag='{{ item.flag }}'>
       <text class='teacher-name'>{{ item.name }}</text>
       <text class='teacher-department'>信息分院 | {{ item.department }} | 副教授</text>
