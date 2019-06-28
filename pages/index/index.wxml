@@ -1,7 +1,8 @@
-<view wx:if='{{ isSelected }}' class="cover" bindtap="selectList"></view>
+<!-- catchtouchmove 禁止透过遮罩层滑动 -->
+<view wx:if='{{ isSelected }}' class="cover" bindtap="selectList" catchtouchmove='true'></view>
 <view wx:if='{{ isSelected }}' class='selectedView'>
-  <text>{{ isSelectedValue }} <text>▼</text></text>
-  <view wx:for="{{ department }}" bindtap="changeDepartment" class="department {{ isSelectedValue == item ? 'selectActive' : ' '}}" data-text="{{ item }}">{{ item }}</view>
+  <text decode='true'>&nbsp;&nbsp;&nbsp;&nbsp;{{ isSelectedValue }} <text>▼</text></text>
+  <view wx:for="{{ department }}" bindtap="changeDepartment" class="department {{ isSelectedValue == item ? 'selectActive' : ' '}}" data-text="{{ item }}" wx:key="{{ index }}">{{ item }}</view>
 </view>
 <view class="search">
   <icon class="search-icon"></icon>

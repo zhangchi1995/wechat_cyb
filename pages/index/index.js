@@ -24,7 +24,12 @@ Page({
       selectSum: 0,
       maxSelectSum: 5,
       isSelected: false,
-      isSelectedValue: '全部导师列表'
+      isSelectedValue: '全部导师列表',
+      fixed: false
+  },
+  //页面滑动 上方搜索以及选择栏固定
+  onPageScroll:function(e){
+
   },
   // 下拉刷新
   onPullDownRefresh: function () {
