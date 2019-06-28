@@ -33,6 +33,10 @@ Page({
   },
   // 下拉刷新
   onPullDownRefresh: function () {
+    if(this.data.isSelected){
+      wx.stopPullDownRefresh();
+      return ;
+    }
     wx.showLoading({
       title: '加载中',
       mask: true
