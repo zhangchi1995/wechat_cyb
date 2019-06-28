@@ -26,6 +26,20 @@ Page({
       isSelected: false,
       isSelectedValue: '全部导师列表'
   },
+  // 下拉刷新
+  onPullDownRefresh: function () {
+    wx.showLoading({
+      title: '加载中',
+      mask: true
+    })
+    let arr = this.data.teachers;
+    let teachers = arr.sort(function () {
+      return (0.5 - Math.random());
+    })
+    this.setData({ teachers });
+    wx.stopPullDownRefresh();
+    wx.hideLoading();
+  },
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
