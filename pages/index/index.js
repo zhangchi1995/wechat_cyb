@@ -4,19 +4,19 @@ const app = getApp()
 Page({
   data: {
     teachers: [
-      { name: "张三", flag: false , isDisplay: true, department: "基础教研室"},
-      { name: "李四", flag: false, isDisplay: true, department: "基础教研室"},
-      { name: "王五", flag: false, isDisplay: true, department: "实验室"},
-      { name: "马超", flag: false, isDisplay: true, department: "网络教研室"},
-      { name: "刘备", flag: false, isDisplay: true, department: "网络教研室"},
-      { name: "吕蒙", flag: false, isDisplay: true, department: "信管教研室"},
-      { name: "张机", flag: false, isDisplay: true, department: "信管教研室"},
-      { name: "关银屏", flag: false, isDisplay: true, department: "计应教研室"},
-      { name: "诸葛连弩", flag: false, isDisplay: true, department: "计应教研室" },
-      { name: "孙权", flag: false, isDisplay: true, department: "计应教研室" },
-      { name: "貂蝉", flag: false, isDisplay: true, department: "网络教研室" },
-      { name: "马岱", flag: false, isDisplay: true, department: "信管教研室" },
-      { name: "凌统", flag: false, isDisplay: true, department: "实验室" }
+      { name: "张三", flag: false , isDisplay: true, department: "基础教研室" , title:'副教授'},
+      { name: "李四", flag: false, isDisplay: true, department: "基础教研室", title: '副教授'},
+      { name: "王五", flag: false, isDisplay: true, department: "实验室", title: '高级实验师'},
+      { name: "马超", flag: false, isDisplay: true, department: "网络教研室", title: '教授'},
+      { name: "刘备", flag: false, isDisplay: true, department: "网络教研室", title: '讲师'},
+      { name: "吕蒙", flag: false, isDisplay: true, department: "信管教研室", title: '高级工程师'},
+      { name: "张机", flag: false, isDisplay: true, department: "信管教研室", title: '中级工程师'},
+      { name: "关银屏", flag: false, isDisplay: true, department: "计应教研室", title: '高级工程师'},
+      { name: "诸葛连弩", flag: false, isDisplay: true, department: "计应教研室", title: ''},
+      { name: "孙权", flag: false, isDisplay: true, department: "计应教研室", title: '教授'},
+      { name: "貂蝉", flag: false, isDisplay: true, department: "网络教研室", title: '助教'},
+      { name: "马岱", flag: false, isDisplay: true, department: "信管教研室", title: '助教'},
+      { name: "凌统", flag: false, isDisplay: true, department: "实验室", title: '中级实验师'}
       ],
       department: [
         '全部导师列表','基础教研室','计应教研室','网络教研室','信管教研室','实验室'
@@ -59,6 +59,11 @@ Page({
         }
       })
     }
+    let arr = this.data.teachers;
+    let teachers = arr.sort(function(){
+      return (0.5 - Math.random());
+    })
+    this.setData({teachers});
   },
   getUserInfo: function(e) {
     console.log(e)
