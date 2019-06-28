@@ -1,12 +1,7 @@
 <view wx:if='{{ isSelected }}' class="cover" bindtap="selectList"></view>
 <view wx:if='{{ isSelected }}' class='selectedView'>
   <text>{{ isSelectedValue }} <text>▼</text></text>
-  <view bindtap="changeDepartment" class="department {{ isSelectedValue == '全部导师列表' ? 'selectActive' : ' '}}" data-text="全部导师列表">全部导师列表</view>
-  <view bindtap="changeDepartment" class="department {{ isSelectedValue == '基础教研室' ? 'selectActive' : ' '}}" data-text="基础教研室">基础教研室</view>
-  <view bindtap="changeDepartment" class="department {{ isSelectedValue == '计应教研室' ? 'selectActive' : ' '}}" data-text="计应教研室">计应教研室</view>
-  <view bindtap="changeDepartment" class="department {{ isSelectedValue == '信管教研室' ? 'selectActive' : ' '}}" data-text="信管教研室">信管教研室</view>
-  <view bindtap="changeDepartment" class="department {{ isSelectedValue == '网络教研室' ? 'selectActive' : ' '}}" data-text="网络教研室">网络教研室</view>
-  <view bindtap="changeDepartment" class="department {{ isSelectedValue == '实验室' ? 'selectActive' : ' '}}" data-text="实验室">实验室</view>
+  <view wx:for="{{ department }}" bindtap="changeDepartment" class="department {{ isSelectedValue == item ? 'selectActive' : ' '}}" data-text="{{ item }}">{{ item }}</view>
 </view>
 <view class="search">
   <icon class="search-icon"></icon>

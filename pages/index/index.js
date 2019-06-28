@@ -18,6 +18,9 @@ Page({
       { name: "马岱", flag: false, isDisplay: true, department: "信管教研室" },
       { name: "凌统", flag: false, isDisplay: true, department: "实验室" }
       ],
+      department: [
+        '全部导师列表','基础教研室','计应教研室','网络教研室','信管教研室','实验室'
+      ],
       selectSum: 0,
       maxSelectSum: 5,
       isSelected: false,
