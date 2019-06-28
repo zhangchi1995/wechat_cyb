@@ -48,6 +48,7 @@
   height: 40rpx;
   line-height: 40rpx;
   margin-top: 10rpx;
+  letter-spacing: 1rpx;
 }
 .teacher-department{
   position: relative;

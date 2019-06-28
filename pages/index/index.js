@@ -33,9 +33,20 @@ Page({
       mask: true
     })
     let arr = this.data.teachers;
+    let temp = [];
+    // 已选择的老师直接置顶 方便用户看
+    for(let i = 0 ; i < arr.length ; i ++){
+      if(arr[i].flag){
+        temp.push(arr[i]);
+        arr.splice(i,1);
+        i --;
+      }
+    }
+    // 随机列表
     let teachers = arr.sort(function () {
       return (0.5 - Math.random());
     })
+    teachers = temp.concat(teachers);
     this.setData({ teachers });
     wx.stopPullDownRefresh();
     wx.hideLoading();
