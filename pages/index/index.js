@@ -29,7 +29,17 @@ Page({
   },
   //页面滑动 上方搜索以及选择栏固定
   onPageScroll:function(e){
-
+    let fixed = this.data.fixed;
+    console.log(e);
+    if(e.scrollTop > 55){
+      this.setData({
+        fixed : true
+      })
+    }else{
+      this.setData({
+        fixed: false
+      })
+    }
   },
   // 下拉刷新
   onPullDownRefresh: function () {
@@ -143,7 +153,12 @@ Page({
       }
     }
   },
+  //打开筛选栏
   selectList: function(e){
+    //将页面强行回到最顶端
+    wx.pageScrollTo({
+      scrollTop: 0,
+    })
     let isSelected = this.data.isSelected;
     this.setData({
       isSelected : !isSelected
