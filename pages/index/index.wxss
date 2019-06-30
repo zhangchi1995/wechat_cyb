@@ -180,3 +180,32 @@ page{
 .selectActive{
   color: red
 }
+.submit{
+  position: fixed;
+  background-color: #fff;
+  height: 100rpx;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10rpx;
+  z-index: 188;
+}
+.submit-img{
+  position: absolute;
+  width: 30rpx;
+  height: 30rpx;
+  left: 0;
+  margin-top: 20rpx;
+  margin-left: 180rpx;
+}
+.submit-btn{
+  margin-top: 20rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  width: 70%;
+  color: red;
+  border: 1px solid red;
+  background-color: transparent;
+}

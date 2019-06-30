@@ -30,7 +30,7 @@ Page({
   //页面滑动 上方搜索以及选择栏固定
   onPageScroll:function(e){
     let fixed = this.data.fixed;
-    console.log(e);
+    // console.log(e);
     if(e.scrollTop > 55){
       this.setData({
         fixed : true

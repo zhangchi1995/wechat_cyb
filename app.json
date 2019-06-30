@@ -6,7 +6,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "信息分院毕业导师选择",
+    "navigationBarTitleText": "信息分院毕业设计导师选择",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
