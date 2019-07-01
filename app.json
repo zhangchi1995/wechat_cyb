@@ -1,7 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/result/result",
+    "pages/sort/sort"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -23,8 +25,14 @@
       {
         "selectedIconPath": "static/img/记录被选中.png",
         "iconPath": "static/img/记录.png",
-        "pagePath": "pages/index/index",
-        "text": "我的填报"
+        "pagePath": "pages/sort/sort",
+        "text": "导师排序"
+      },
+      {
+        "selectedIconPath": "static/img/结果查看被选中.png",
+        "iconPath": "static/img/结果查看.png",
+        "pagePath": "pages/result/result",
+        "text": "我的导师"
       }
     ]
   },
