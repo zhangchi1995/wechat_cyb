@@ -111,7 +111,7 @@ page{
   background-position: left center;
   /* padding-left: 30px; */
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABjElEQVQ4T62UTVLCQBCF30thsQ2cAKuErXoDOIF4AnEpLIAbeAOyIS7lBnID8QZZE6vAC2C2Is6zBiQCJsRCZzk/X7/uftPEPy/+Mw+JQLc3cZH/uHCokg1ojCIAT1GrEmQJ+AF0/ec6pXtQLxSHSwBVEmj3H8z8qBt1j22AxLUFdPvjBklPRD26KY82X1jVTv7dk3Cq+VEtDRoD3btJydFiYqTzfakV+uGQ4HTWOukkSYyBxf6zBxp31qw09tUpDvyWKySpjIEFPxyJuN1NNQle8MeByE7S3W+FfihD1H4HDEcChlGz7O0GPFBhejYbCscDyInSir1Wsur24tVk1dAWm1oEkqqZXaaitOZt+9APO4TaEi6ToCsnqA3AmzXL3b22iVP6MjeARxKBEacOdCaoDvCF0BTgFaTBrFW5Tm3K7q9AftGgUAXhUgyMo+HaAUV/PEiDHjxtXD/sOEDP2kdvueu1yQ8G2ozs33fIewGj12a5tpwjWeMo69xOJ0Cltcn/DPxVU7JU7Tv/BFLj0hU1owXVAAAAAElFTkSuQmCC");
-  margin-left: 10rpx;
+  margin-left: 20rpx;
 }
 .search-input{
   opacity: 1;
@@ -177,6 +177,10 @@ page{
   opacity: 0.8;
   z-index: 998;
 }
+.null-block{
+  width:100%;
+  height:72rpx;
+}
 .selectActive{
   color: red
 }
@@ -198,14 +202,15 @@ page{
   height: 30rpx;
   left: 0;
   margin-top: 20rpx;
-  margin-left: 180rpx;
+  margin-left: 235rpx;
 }
 .submit-btn{
   margin-top: 20rpx;
   height: 70rpx;
   line-height: 70rpx;
-  width: 70%;
+  width: 85%;
   color: red;
   border: 1px solid red;
   background-color: transparent;
+  font-size: 36rpx;
 }

@@ -31,7 +31,8 @@
     </view>
     <view wx:if='{{ item.flag }}' class='seal'>已 选</view>
   </view>
+  <view class="null-block"></view>
 </view>
 <view class='submit'>
-  <button class='submit-btn'><image class='submit-img' src='../../static/img/submit.png'></image>提交</button>
+  <button bindtap='submit' class='submit-btn'><image class='submit-img' src='../../static/img/submit.png'></image>提交</button>
 </view>

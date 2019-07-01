@@ -171,5 +171,35 @@ Page({
       isSelected : false,
       isSelectedValue : e.target.dataset.text
     })
+  },
+  submit: function(){
+    let vm = this;
+    if(vm.data.selectSum != vm.data.maxSelectSum){
+      wx.showModal({
+        title: '提交失败',
+        content: '需要选择5名导师，当前已选择' + vm.data.selectSum + '名',
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+          }else{
+            console.log('用户点击取消')
+          }
+        }
+      })
+    }else{
+      wx.showLoading({
+        title: '提交中',
+        mask: true
+      })
+      setTimeout(function () {
+        wx.hideLoading()
+        wx.showToast({
+          title: '成功',
+          icon: 'success',
+          duration:800,
+          mask: true
+        })
+      }, 1000)
+    }
   }
 })
