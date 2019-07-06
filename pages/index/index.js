@@ -200,6 +200,25 @@ Page({
           mask: true
         })
       }, 1000)
+      var teachers = this.data.teachers;
+      let num = 0;
+      for(let i = 0 ; i < teachers.length ; i ++){
+        if(teachers[i].flag){
+          wx.setStorage({
+            key: "teacher"+num,
+            data: teachers[i],
+          })
+          num ++;
+        }
+      }
+      for (let i = 0; i < 5; i++) {
+        wx.getStorage({
+          key: 'teacher'+i,
+          success(res) {
+            console.log(res.data)
+          }
+        })
+      }
     }
   }
 })
