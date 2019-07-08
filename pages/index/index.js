@@ -191,34 +191,27 @@ Page({
         title: '提交中',
         mask: true
       })
+      var teachers = this.data.teachers;
+      let num = 0;
+      for(let i = 0 ; i < teachers.length ; i ++){
+        if(teachers[i].flag){
+          try {
+            wx.setStorageSync('teacher' + num, teachers[i]);
+          } catch (e) { 
+
+          }
+          num ++;
+        }
+      }
       setTimeout(function () {
         wx.hideLoading()
         wx.showToast({
           title: '成功',
           icon: 'success',
-          duration:800,
+          duration: 800,
           mask: true
         })
       }, 1000)
-      var teachers = this.data.teachers;
-      let num = 0;
-      for(let i = 0 ; i < teachers.length ; i ++){
-        if(teachers[i].flag){
-          wx.setStorage({
-            key: "teacher"+num,
-            data: teachers[i],
-          })
-          num ++;
-        }
-      }
-      for (let i = 0; i < 5; i++) {
-        wx.getStorage({
-          key: 'teacher'+i,
-          success(res) {
-            console.log(res.data)
-          }
-        })
-      }
     }
   }
 })

@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    teachers: []
   },
 
   /**
@@ -26,7 +26,21 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    let teachers = this.data.teachers;
+    let temp = [];
+    for (let i = 0; i < 5; i++) {
+      // 同步获取缓存 如果异步的话会导致temp数组为空
+      try {
+        let value = wx.getStorageSync('teacher' + i);
+        temp.push(value);
+      } catch (e) {
+        // Do something when catch error
+      }
+    }
+    this.setData({
+      teachers : temp
+    })
+    console.log(this.data.teachers);
   },
 
   /**

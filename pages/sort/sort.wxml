@@ -1,3 +1,2 @@
 <!--pages/sort/sort.wxml-->
-<text>pages/sort/sort.wxml</text>
 <text wx:for="{{ teachers }}" wx-key="{{ index }}">{{ item.name }}</text>
