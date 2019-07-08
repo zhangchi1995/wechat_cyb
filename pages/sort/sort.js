@@ -76,5 +76,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  dragMove: function(e){
+    console.log(e.target.dataset.index);
+    console.log(e.detail.y);
   }
 })
