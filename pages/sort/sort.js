@@ -79,7 +79,21 @@ Page({
   },
 
   dragMove: function(e){
+    console.log("ok");
     console.log(e.target.dataset.index);
     console.log(e.detail.y);
+    let teachers = this.data.teachers;
+    if(e.detail.y <= -12.5){
+      let temp = teachers[e.target.dataset.index];
+      teachers[e.target.dataset.index] = teachers[e.target.dataset.index - 1];
+      teachers[e.target.dataset.index - 1] = temp;
+      this.setData({
+        teachers : teachers
+      })
+    }else if(e.detail.y >= 12.5){
+      let temp = teachers[e.target.dataset.index];
+      teachers[e.target.dataset.index] = teachers[e.target.dataset.index + 1];
+      teachers[e.target.dataset.index + 1] = temp;
+    }
   }
 })

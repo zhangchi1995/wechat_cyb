@@ -1,4 +1,4 @@
 <!--pages/sort/sort.wxml-->
 <movable-area class="test">
-  <movable-view class="test1" bindchange="dragMove" data-index="{{  index  }}" direction="vertical" wx:for="{{ teachers }}" wx-key="{{ index }}">{{ item.name }}</movable-view>
+  <movable-view class="test1" bindchange="dragMove" data-index="{{  index  }}" direction="vertical" wx:for="{{ teachers }}" wx:key="{{ index }}">{{ item.name }}</movable-view>
 </movable-area>
