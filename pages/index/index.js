@@ -195,6 +195,7 @@ Page({
       let num = 0;
       for(let i = 0 ; i < teachers.length ; i ++){
         if(teachers[i].flag){
+          // 同步存入缓存
           try {
             wx.setStorageSync('teacher' + num, teachers[i]);
           } catch (e) { 
