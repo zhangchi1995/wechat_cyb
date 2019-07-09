@@ -1,11 +1,15 @@
 // pages/sort/sort.js
+var flag = true;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    teachers: []
+    teachers: [],
+    y: 0,
+    direction: "vertical",
+    disabled: ""
   },
 
   /**
@@ -77,23 +81,39 @@ Page({
   onShareAppMessage: function () {
 
   },
-
   dragMove: function(e){
-    console.log("ok");
-    console.log(e.target.dataset.index);
+    // console.log(e.target.dataset.index);
     console.log(e.detail.y);
+    console.log(e.detail.source);
     let teachers = this.data.teachers;
-    if(e.detail.y <= -12.5){
-      let temp = teachers[e.target.dataset.index];
-      teachers[e.target.dataset.index] = teachers[e.target.dataset.index - 1];
-      teachers[e.target.dataset.index - 1] = temp;
-      this.setData({
-        teachers : teachers
-      })
-    }else if(e.detail.y >= 12.5){
-      let temp = teachers[e.target.dataset.index];
-      teachers[e.target.dataset.index] = teachers[e.target.dataset.index + 1];
-      teachers[e.target.dataset.index + 1] = temp;
-    }
+    let scoreY = e.detail.y;
+    // if(e.detail.source==""){
+    //   this.setData({
+    //     disabled : "disabled"
+    //   })
+    // }
+    if(flag){
+      if (e.detail.y <= -25) {
+        flag = false;
+        let temp = teachers[e.target.dataset.index];
+        teachers[e.target.dataset.index] = teachers[e.target.dataset.index - 1];
+        this.setData({
+          teachers: teachers,
+          direction: "none",
+          y: 0
+        })
+      }
+    } 
+  },
+  stop: function(e){
+    console.log("ok");
+    let scoreY = this.data.y;
+    this.setData({
+      y : 0
+    })
+    flag = true;
+    this.setData({
+      disabled: ""
+    })
   }
 })
