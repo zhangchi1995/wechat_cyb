@@ -1,5 +1,5 @@
 // pages/sort/sort.js
-var flag = true;
+var startIndex;
 Page({
 
   /**
@@ -36,9 +36,12 @@ Page({
       // 同步获取缓存 如果异步的话会导致temp数组为空
       try {
         let value = wx.getStorageSync('teacher' + i);
+        value['y'] = 0;
+        value['disabled'] = "";
         temp.push(value);
       } catch (e) {
         // Do something when catch error
+        console.log(e);
       }
     }
     this.setData({
@@ -81,39 +84,28 @@ Page({
   onShareAppMessage: function () {
 
   },
+  dragStart:function(e){
+    console.log("start "+e.target.dataset.index);
+    startIndex = e.target.dataset.index;
+  },
   dragMove: function(e){
-    // console.log(e.target.dataset.index);
-    console.log(e.detail.y);
-    console.log(e.detail.source);
+    console.log("index "+e.target.dataset.index);
+    // console.log(e.detail.y);
+    // console.log(e.detail.source);
+    let y = e.detail.y;
     let teachers = this.data.teachers;
-    let scoreY = e.detail.y;
-    // if(e.detail.source==""){
-    //   this.setData({
-    //     disabled : "disabled"
-    //   })
-    // }
-    if(flag){
-      if (e.detail.y <= -25) {
-        flag = false;
-        let temp = teachers[e.target.dataset.index];
-        teachers[e.target.dataset.index] = teachers[e.target.dataset.index - 1];
-        this.setData({
-          teachers: teachers,
-          direction: "none",
-          y: 0
+    // if(e.detail.y <= -25){
+      let num = Math.abs(parseInt(y / 50));
+      if(num > 0){
+      console.log("num = " + num);
+      let str = "teachers[" + (startIndex - num) + "]";
+      let sumY = teachers[startIndex-num].y + 50;
+      this.setData({
+        [str + '.y']: sumY
         })
       }
-    } 
+    // }
   },
-  stop: function(e){
-    console.log("ok");
-    let scoreY = this.data.y;
-    this.setData({
-      y : 0
-    })
-    flag = true;
-    this.setData({
-      disabled: ""
-    })
+  dragStop:function(e){
   }
 })

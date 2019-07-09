@@ -6,9 +6,11 @@
                 direction="{{ direction }}" 
                 wx:for="{{ teachers }}" 
                 out-of-bounds="true" 
-                y="{{ y }}" 
+                y="{{ item.y }}" 
                 wx:key="{{ index }}"
                 damping="200"
                 bindtouchend="stop"
-                disabled="{{ disabled }}">{{ item.name }}</movable-view>
+                disabled="{{ item.disabled }}"
+                bindtouchstart="dragStart"
+                bindtouchend="dragStop">{{ item.name }} + {{ item.y }}</movable-view>
 </movable-area>
