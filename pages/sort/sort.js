@@ -32,13 +32,16 @@ Page({
   onShow: function () {
     let teachers = this.data.teachers;
     let temp = [];
+    let startY = 0;
     for (let i = 0; i < 5; i++) {
       // 同步获取缓存 如果异步的话会导致temp数组为空
       try {
         let value = wx.getStorageSync('teacher' + i);
-        value['y'] = 0;
+        value['y'] = startY;
         value['disabled'] = "";
+        value['isDrag'] = true
         temp.push(value);
+        startY += 50;
       } catch (e) {
         // Do something when catch error
         console.log(e);
@@ -85,27 +88,12 @@ Page({
 
   },
   dragStart:function(e){
-    console.log("start "+e.target.dataset.index);
-    startIndex = e.target.dataset.index;
+    
   },
   dragMove: function(e){
-    console.log("index "+e.target.dataset.index);
-    // console.log(e.detail.y);
-    // console.log(e.detail.source);
-    let y = e.detail.y;
-    let teachers = this.data.teachers;
-    // if(e.detail.y <= -25){
-      let num = Math.abs(parseInt(y / 50));
-      if(num > 0){
-      console.log("num = " + num);
-      let str = "teachers[" + (startIndex - num) + "]";
-      let sumY = teachers[startIndex-num].y + 50;
-      this.setData({
-        [str + '.y']: sumY
-        })
-      }
-    // }
+ 
   },
   dragStop:function(e){
+
   }
 })

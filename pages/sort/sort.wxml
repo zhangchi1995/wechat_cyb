@@ -1,16 +1,13 @@
 <!--pages/sort/sort.wxml-->
 <movable-area class="test">
   <movable-view class="test1" 
-                bindchange="dragMove" 
                 data-index="{{  index  }}" 
-                direction="{{ direction }}" 
-                wx:for="{{ teachers }}" 
-                out-of-bounds="true" 
+                direction="vertical" 
+                wx:for="{{ teachers }}"
                 y="{{ item.y }}" 
                 wx:key="{{ index }}"
                 damping="200"
-                bindtouchend="stop"
-                disabled="{{ item.disabled }}"
                 bindtouchstart="dragStart"
-                bindtouchend="dragStop">{{ item.name }} + {{ item.y }}</movable-view>
+                bindtouchend="dragStop"
+                bindchange="dragMove">{{ item.name }} + {{ item.y }}</movable-view>
 </movable-area>
