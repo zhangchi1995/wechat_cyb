@@ -1,13 +1,4 @@
 <!--pages/sort/sort.wxml-->
-<movable-area class="test">
-  <movable-view class="test1" 
-                data-index="{{  index  }}" 
-                direction="vertical" 
-                wx:for="{{ teachers }}"
-                y="{{ item.y }}" 
-                wx:key="{{ index }}"
-                damping="200"
-                bindtouchstart="dragStart"
-                bindtouchend="dragStop"
-                bindchange="dragMove">{{ item.name }} + {{ item.y }}</movable-view>
-</movable-area>
+<view class="list">
+  <view class="title">第一位次</view>
+</view>

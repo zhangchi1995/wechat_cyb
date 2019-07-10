@@ -1,5 +1,4 @@
 // pages/sort/sort.js
-var startIndex;
 Page({
 
   /**
@@ -32,16 +31,11 @@ Page({
   onShow: function () {
     let teachers = this.data.teachers;
     let temp = [];
-    let startY = 0;
     for (let i = 0; i < 5; i++) {
       // 同步获取缓存 如果异步的话会导致temp数组为空
       try {
         let value = wx.getStorageSync('teacher' + i);
-        value['y'] = startY;
-        value['disabled'] = "";
-        value['isDrag'] = true
         temp.push(value);
-        startY += 50;
       } catch (e) {
         // Do something when catch error
         console.log(e);
@@ -91,7 +85,7 @@ Page({
     
   },
   dragMove: function(e){
- 
+    
   },
   dragStop:function(e){
 
