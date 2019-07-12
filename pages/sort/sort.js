@@ -6,9 +6,8 @@ Page({
    */
   data: {
     teachers: [],
-    y: 0,
-    direction: "vertical",
-    disabled: ""
+    isSwitch: false,
+    notice: "各位同学请注意：导师顺序选择对最终导师分配结果有较大影响，请认真选择"
   },
 
   /**
@@ -45,6 +44,31 @@ Page({
       teachers : temp
     })
     console.log(this.data.teachers);
+    // 公告动画
+    let vm = this;
+    setInterval(function(){
+      var animation = wx.createAnimation({
+        duration: 15000,
+        timingFunction: 'linear',
+        delay: 0
+      });
+      animation.translate("-280vw").step();
+      vm.setData({
+        ani: animation.export()
+      })
+    },1000)
+
+    setInterval(function () {
+      var animation1 = wx.createAnimation({
+        duration: 1,
+        timingFunction: 'step-start',
+        delay: 0
+      })
+      animation1.translate(0).step();
+      vm.setData({
+        ani: animation1.export()
+      })
+    }, 10000)
   },
 
   /**
@@ -81,13 +105,9 @@ Page({
   onShareAppMessage: function () {
 
   },
-  dragStart:function(e){
-    
-  },
-  dragMove: function(e){
-    
-  },
-  dragStop:function(e){
-
+  changeSwitch: function(e){
+    this.setData({
+      isSwitch: e.detail.value
+    })
   }
 })

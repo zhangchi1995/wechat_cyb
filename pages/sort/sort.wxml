@@ -1,4 +1,20 @@
 <!--pages/sort/sort.wxml-->
+<view class="notice">
+  <image src="../../static/img/notice.png"></image>
+  <view>
+    <text animation="{{ani}}">{{ notice }}</text>
+  </view>
+</view>
 <view class="list">
-  <view class="title">第一位次</view>
+  <view class="switch">
+    <text>自定义导师顺序</text>
+    <switch color="red" bindchange="changeSwitch"></switch>
+  </view>
+</view>
+<view class="tag">
+  <text wx:if="{{ !isSwitch }}">如不开启，系统将自动选择默认导师排序</text>
+  <text wx:else>系统将根据下面排列按顺序记录你的导师意愿</text>
+</view>
+<view class="teachers" wx:for="{{ teachers }}">
+  <text>{{ item.name }}</text>
 </view>
