@@ -105,9 +105,23 @@ Page({
   onShareAppMessage: function () {
 
   },
+  // switch开关
   changeSwitch: function(e){
     this.setData({
       isSwitch: e.detail.value
     })
+  },
+  // 上下调整顺序
+  changePosition: function(e){
+    // console.log(e.currentTarget.dataset.index);
+    // console.log(e.target.id);
+    // 获取当前教师卡index
+    let index = e.currentTarget.dataset.index;
+    
+    if(e.target.id=="upper"){
+      console.log("upper "+index);
+    } else if (e.target.id == "down") {
+      console.log("down "+index);
+    }
   }
 })

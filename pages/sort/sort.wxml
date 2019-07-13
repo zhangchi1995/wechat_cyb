@@ -15,6 +15,10 @@
   <text wx:if="{{ !isSwitch }}">如不开启，系统将自动选择默认导师排序</text>
   <text wx:else>系统将根据下面排列按顺序记录你的导师意愿</text>
 </view>
-<view class="teachers" wx:for="{{ teachers }}">
+<view bindtap="changePosition" data-index="{{ index }}" class="teachers" wx:for="{{ teachers }}" wx:key="{{ index }}">
   <text>{{ item.name }}</text>
+  <view wx:if="{{ isSwitch }}">
+    <image id="upper" src="../../static/img/upper.png"></image>
+    <image id="down" src="../../static/img/down.png"></image>
+  </view>
 </view>

@@ -63,13 +63,25 @@ page{
   margin-left: 20rpx;
 }
 .teachers{
+  display: flex;
   height: 120rpx;
   line-height: 120rpx;
   width: 100%;
   background-color: #ffffff;
   border-bottom: 1rpx solid #EEE5DE;
+  justify-content: space-between;
 }
 .teachers text{
   font-size: 36rpx;
   margin-left: 20rpx;
+}
+.teachers view{
+  display: flex;
+  height: 120rpx; 
+}
+.teachers view image{
+  width: 80rpx;
+  height: 80rpx;
+  align-self: center;
+  margin-right: 20rpx;
 }
