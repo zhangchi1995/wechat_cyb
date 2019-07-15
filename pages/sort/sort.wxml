@@ -1,4 +1,18 @@
-<!--pages/sort/sort.wxml-->
+<!--pages/sort/sort.wxml--><!-- catchtouchmove 禁止透过遮罩层滑动 -->
+<view wx:if="{{ isTeachersMsgView }}" class="cover" bindtap="selectList" catchtouchmove='true'></view>
+<view wx:if="{{ isTeachersMsgView }}" class="teachers-msg">
+  <text bindtap="offView" class="off" id="off">×</text>
+  <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1561662409639&di=7f57d343d6f30dfd085a0d4639a5b6be&imgtype=0&src=http%3A%2F%2Fn1.itc.cn%2Fimg8%2Fwb%2Frecom%2F2016%2F03%2F14%2F145794449150725558.JPEG"></image>
+  <view class="teachers-text">
+    <text>{{ teacherViewMsg.name }}</text>
+    <text>( Java JavaScript C++ )</text>
+    <view class="line"></view>
+    <view>
+      <text>{{ teacherViewMsg.title }}</text>
+      <text>信息技术分院 {{ teacherViewMsg.department }}</text>
+    </view>
+  </view>
+</view>
 <view class="notice">
   <image src="../../static/img/notice.png"></image>
   <view>
@@ -11,14 +25,20 @@
     <switch color="red" bindchange="changeSwitch"></switch>
   </view>
 </view>
+<view class="tap">
+  <text>长按名片空白处可以查看导师详细信息噢~</text>
+</view>
 <view class="tag">
   <text wx:if="{{ !isSwitch }}">如不开启，系统将自动选择默认导师排序</text>
   <text wx:else>系统将根据下面排列按顺序记录你的导师意愿</text>
 </view>
-<view bindtap="changePosition" data-index="{{ index }}" class="teachers" wx:for="{{ teachers }}" wx:key="{{ index }}">
-  <text>{{ item.name }}</text>
-  <view wx:if="{{ isSwitch }}">
-    <image id="upper" src="../../static/img/upper.png"></image>
-    <image id="down" src="../../static/img/down.png"></image>
+<view bindtap="changePosition" data-index="{{ index }}" class="teachers" wx:for="{{ teachers }}" wx:key="{{ index }}" bindlongpress="onView">
+  <view>
+    <text>{{ index + 1 }}</text>
+    <text>{{ item.name }}</text>
+  </view>  
+  <view id="upperAndDown" wx:if="{{ isSwitch }}">
+    <image class="{{ index==0 ? 'opacity' : ''}}" id="upper" src="../../static/img/upper.png"></image>
+    <image class="{{ index==4 ? 'opacity' : ''}}" id="down" src="../../static/img/down.png"></image>
   </view>
 </view>

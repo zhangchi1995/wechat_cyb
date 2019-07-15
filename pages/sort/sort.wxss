@@ -1,6 +1,70 @@
 /* pages/sort/sort.wxss */
 page{
   background-color: #EEE5DE;
+  height: 100%;
+}
+.cover{
+  position: absolute;
+  width: 100%;
+  height: 1500rpx;
+  background-color: gray;
+  opacity: 0.8;
+  z-index: 998;
+}
+.teachers-msg{
+  width: 500rpx;
+  margin-left: 125rpx;
+  margin-top: 160rpx;
+  height: 850rpx;
+  position: absolute;
+  background-color: #104E8B;
+  z-index: 90000;
+}
+.off{
+  position: absolute;
+  color: red;
+  margin-left: 450rpx;
+  font-size: 48rpx;
+  z-index: 99999;
+}
+.teachers-msg image{
+  width: 500rpx;
+  height: 500rpx;
+}
+.teachers-text text:nth-child(1){
+  color: #ffffff;
+  font-size: 46rpx;
+  margin-left: 15rpx;
+  letter-spacing: 4rpx;
+}
+.teachers-text text:nth-child(2){
+  color: #ffffff;
+  font-size: 28rpx;
+  margin-left: 15rpx;
+}
+.teachers-text view{
+  display: flex;
+  flex-direction: column;
+}
+.teachers-text view text:nth-child(1){
+  margin-top: 45rpx;
+  margin-left: 15rpx;
+  font-size: 46rpx;
+  letter-spacing: 4rpx;
+}
+.teachers-text view text:nth-child(2){
+  margin-top: 45rpx;
+  margin-left: 15rpx;
+  font-size: 32rpx;
+  letter-spacing: 1rpx;
+  font-weight: 600;
+}
+.line{
+  width: 480rpx;
+  height: 4rpx;
+  margin: 0 auto;
+  margin-top: 10rpx;
+  background-color: #ffffff;
 }
 .notice{
   display: flex;
@@ -31,7 +95,7 @@ page{
 }
 .list{
   width: 100%;
-  height: 80rpx;
+  height: 90rpx;
 }
 .switch{
   height: 90rpx;
@@ -71,7 +135,15 @@ page{
   border-bottom: 1rpx solid #EEE5DE;
   justify-content: space-between;
 }
-.teachers text{
+.teachers view text:nth-child(1){
+  background-color: red;
+  width: 60rpx;
+  text-align: center;
+  font-size: 52rpx;
+  color: #ffffff;
+  font-weight: 600;
+}
+.teachers view text:nth-child(2){
   font-size: 36rpx;
   margin-left: 20rpx;
 }
@@ -84,4 +156,20 @@ page{
   height: 80rpx;
   align-self: center;
   margin-right: 20rpx;
+}
+.tap{
+  width: 100%;
+  height: 60rpx;
+  background-color: #ffffff;
+  border-top: 1px solid #EEE5DE;
+}
+.tap text{
+  color: red;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-left: 20rpx;
+  font-size: 24rpx;
+}
+.opacity{
+  opacity: 0.3;
 }
