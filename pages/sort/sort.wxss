@@ -24,7 +24,7 @@ page{
   position: absolute;
   color: red;
   margin-left: 450rpx;
-  font-size: 48rpx;
+  font-size: 24px;
   z-index: 99999;
 }
 .teachers-msg image{
@@ -33,13 +33,13 @@ page{
 }
 .teachers-text text:nth-child(1){
   color: #ffffff;
-  font-size: 46rpx;
+  font-size: 23px;
   margin-left: 15rpx;
-  letter-spacing: 4rpx;
+  letter-spacing: 2px;
 }
 .teachers-text text:nth-child(2){
   color: #ffffff;
-  font-size: 28rpx;
+  font-size: 14px;
   margin-left: 15rpx;
 }
 .teachers-text view{
@@ -49,14 +49,14 @@ page{
 .teachers-text view text:nth-child(1){
   margin-top: 45rpx;
   margin-left: 15rpx;
-  font-size: 46rpx;
-  letter-spacing: 4rpx;
+  font-size: 23px;
+  letter-spacing: 2px;
 }
 .teachers-text view text:nth-child(2){
   margin-top: 45rpx;
   margin-left: 15rpx;
-  font-size: 32rpx;
-  letter-spacing: 1rpx;
+  font-size: 16px;
+  letter-spacing: 1px;
   font-weight: 600;
 }
 .line{
@@ -89,7 +89,7 @@ page{
 .notice view text{
   width: 90%;
   float: right;
-  font-size: 26rpx;
+  font-size: 13px;
   color: #ffffff;
   white-space: nowrap;
 }
@@ -102,7 +102,7 @@ page{
   line-height: 90rpx;
   width: 100%;
   background-color: #ffffff;
-  font-size: 32rpx;
+  font-size: 16px;
 }
 .switch text{
   margin-left: 20rpx;
@@ -118,11 +118,11 @@ page{
   height: 60rpx;
   line-height: 60rpx;
   background-color: #ffffff;
-  border-top: 1rpx solid #EEE5DE;
-  border-bottom: 1rpx solid #EEE5DE;
+  border-top: 1px solid #EEE5DE;
+  border-bottom: 1px solid #EEE5DE;
 }
 .tag text{
-  font-size: 24rpx;
+  font-size: 12px;
   color: red;
   margin-left: 20rpx;
 }
@@ -132,19 +132,19 @@ page{
   line-height: 120rpx;
   width: 100%;
   background-color: #ffffff;
-  border-bottom: 1rpx solid #EEE5DE;
+  border-bottom: 1px solid #EEE5DE;
   justify-content: space-between;
 }
 .teachers view text:nth-child(1){
   background-color: red;
   width: 60rpx;
   text-align: center;
-  font-size: 52rpx;
+  font-size: 26px;
   color: #ffffff;
   font-weight: 600;
 }
 .teachers view text:nth-child(2){
-  font-size: 36rpx;
+  font-size: 18px;
   margin-left: 20rpx;
 }
 .teachers view{
@@ -168,7 +168,7 @@ page{
   height: 60rpx;
   line-height: 60rpx;
   margin-left: 20rpx;
-  font-size: 24rpx;
+  font-size: 12px;
 }
 .opacity{
   opacity: 0.3;
