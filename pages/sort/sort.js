@@ -71,6 +71,8 @@ Page({
         ani: animation1.export()
       })
     }, 10000)
+    
+    
   },
 
   /**

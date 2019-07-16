@@ -5,7 +5,7 @@
   <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1561662409639&di=7f57d343d6f30dfd085a0d4639a5b6be&imgtype=0&src=http%3A%2F%2Fn1.itc.cn%2Fimg8%2Fwb%2Frecom%2F2016%2F03%2F14%2F145794449150725558.JPEG"></image>
   <view class="teachers-text">
     <text>{{ teacherViewMsg.name }}</text>
-    <text>( Java JavaScript C++ )</text>
+    <view>Java JavaScript C++</view>
     <view class="line"></view>
     <view>
       <text>{{ teacherViewMsg.title }}</text>

@@ -14,8 +14,7 @@ page{
 .teachers-msg{
   width: 500rpx;
   margin-left: 125rpx;
-  margin-top: 160rpx;
-  height: 850rpx;
+  margin-top: 16vh;
   position: absolute;
   background-color: #104E8B;
   z-index: 90000;
@@ -24,22 +23,25 @@ page{
   position: absolute;
   color: red;
   margin-left: 450rpx;
-  font-size: 24px;
+  font-size: 48rpx;
   z-index: 99999;
 }
 .teachers-msg image{
   width: 500rpx;
   height: 500rpx;
 }
-.teachers-text text:nth-child(1){
+
+.teachers-text{
   color: #ffffff;
-  font-size: 23px;
+  padding-bottom: 20px;
+}
+.teachers-text text:nth-child(1){
+  font-size: 46rpx;
   margin-left: 15rpx;
   letter-spacing: 2px;
 }
-.teachers-text text:nth-child(2){
-  color: #ffffff;
-  font-size: 14px;
+.teachers-text view:nth-child(2){
+  font-size: 28rpx;
   margin-left: 15rpx;
 }
 .teachers-text view{
@@ -47,15 +49,15 @@ page{
   flex-direction: column;
 }
 .teachers-text view text:nth-child(1){
-  margin-top: 45rpx;
+  margin-top: 1.5vh;
   margin-left: 15rpx;
-  font-size: 23px;
+  font-size: 46rpx;
   letter-spacing: 2px;
 }
 .teachers-text view text:nth-child(2){
-  margin-top: 45rpx;
+  margin-top: 1.5vh;
   margin-left: 15rpx;
-  font-size: 16px;
+  font-size: 32rpx;
   letter-spacing: 1px;
   font-weight: 600;
 }
@@ -69,20 +71,19 @@ page{
 .notice{
   display: flex;
   width: 100%;
-  height: 70rpx;
-  line-height: 70rpx;
+  height: 6vh;
+  line-height: 6vh;
   background-color: red;
 }
 .notice image{
-  height: 40rpx;
-  width: 40rpx;
+  height: 4vh;
+  width: 4vh;
   margin-left: 20rpx;
-  margin-top: 15rpx;
+  margin-top: 1vh;
 }
 .notice view{
   width: 100%;
   float: right;
-  height: 60rpx;
   background-color: red;
   overflow: hidden;
 }
@@ -95,11 +96,11 @@ page{
 }
 .list{
   width: 100%;
-  height: 90rpx;
+  height: 10vh;
 }
 .switch{
-  height: 90rpx;
-  line-height: 90rpx;
+  height: 10vh;
+  line-height: 10vh;
   width: 100%;
   background-color: #ffffff;
   font-size: 16px;
@@ -115,8 +116,8 @@ page{
 .tag{
   display: flex;
   width: 100%;
-  height: 60rpx;
-  line-height: 60rpx;
+  height: 5vh;
+  line-height: 5vh;
   background-color: #ffffff;
   border-top: 1px solid #EEE5DE;
   border-bottom: 1px solid #EEE5DE;
@@ -128,8 +129,8 @@ page{
 }
 .teachers{
   display: flex;
-  height: 120rpx;
-  line-height: 120rpx;
+  height: calc(( 100vh - 46vh ) / 5);
+  line-height: calc(( 100vh - 46vh ) / 5);
   width: 100%;
   background-color: #ffffff;
   border-bottom: 1px solid #EEE5DE;
@@ -139,7 +140,7 @@ page{
   background-color: red;
   width: 60rpx;
   text-align: center;
-  font-size: 26px;
+  font-size: 52rpx;
   color: #ffffff;
   font-weight: 600;
 }
@@ -149,7 +150,6 @@ page{
 }
 .teachers view{
   display: flex;
-  height: 120rpx; 
 }
 .teachers view image{
   width: 80rpx;
@@ -159,17 +159,46 @@ page{
 }
 .tap{
   width: 100%;
-  height: 60rpx;
+  height: 5vh;
+  line-height: 5vh;
   background-color: #ffffff;
   border-top: 1px solid #EEE5DE;
 }
 .tap text{
   color: red;
-  height: 60rpx;
-  line-height: 60rpx;
   margin-left: 20rpx;
   font-size: 12px;
 }
 .opacity{
   opacity: 0.3;
+}
+
+@media screen and (min-height: 900px) {
+  .teachers-msg{
+    width: 400rpx;
+    margin-left: 175rpx;
+    color: red
+  }
+  .off{
+    margin-left: 360rpx;
+  }
+  .teachers-msg image{
+    width: 400rpx;
+    height: 400rpx;
+  }
+  .line{
+    width: 380rpx;
+  }
+  .teachers-text text:nth-child(1){
+    font-size: 34px;
+  }
+  .teachers-text view:nth-child(2){
+    font-size: 16px;
+  }
+  .teachers-text view text:nth-child(1){
+    font-size: 34px;
+  }
+  .teachers-text view text:nth-child(2){
+    font-size: 20px;
+  }
 }
