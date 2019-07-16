@@ -201,4 +201,7 @@ page{
   .teachers-text view text:nth-child(2){
     font-size: 20px;
   }
+  .notice view text{
+    font-size: 18px;
+  }
 }
