@@ -16,7 +16,7 @@
 <view class="notice">
   <image src="../../static/img/notice.png"></image>
   <view>
-    <text animation="{{ani}}">{{ notice }}</text>
+    <text>{{ notice }}</text>
   </view>
 </view>
 <view class="list">

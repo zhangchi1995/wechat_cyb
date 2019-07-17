@@ -78,7 +78,7 @@ page{
 .notice image{
   height: 4vh;
   width: 4vh;
-  margin-left: 20rpx;
+  margin-left: 10px;
   margin-top: 1vh;
 }
 .notice view{
@@ -88,11 +88,20 @@ page{
   overflow: hidden;
 }
 .notice view text{
-  width: 90%;
+  width: 675rpx;
   float: right;
-  font-size: 13px;
+  font-size: 26rpx;
   color: #ffffff;
   white-space: nowrap;
+  animation: noticeRunning 15s linear infinite;
+}
+@keyframes noticeRunning{
+  from{
+    transform: translateX(100%);
+  }
+  to{
+    transform: translateX(-155%);
+  }
 }
 .list{
   width: 100%;

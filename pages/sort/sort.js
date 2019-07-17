@@ -47,34 +47,17 @@ Page({
     })
     console.log(this.data.teachers);
     // 公告动画
-    let vm = this;
-    setInterval(function(){
-      var animation = wx.createAnimation({
-        duration: 15000,
-        timingFunction: 'linear',
-        delay: 0
-      });
-      animation.translate("-280vw").step();
-      vm.setData({
-        ani: animation.export()
-      })
-    },1000)
-
-    setInterval(function () {
-      var animation1 = wx.createAnimation({
-        duration: 1,
-        timingFunction: 'step-start',
-        delay: 0
-      })
-      animation1.translate(0).step();
-      vm.setData({
-        ani: animation1.export()
-      })
-    }, 10000)
-    
-    
+    // let vm = this;
+    // let animation = wx.createAnimation({
+    //   duration: 15000,
+    //   timingFunction: 'linear',
+    //   delay: 0
+    // });
+    // animation.translate("-280vw").step();
+    // vm.setData({
+    //   ani: animation.export()
+    // })
   },
-
   /**
    * 生命周期函数--监听页面隐藏
    */
