@@ -95,6 +95,7 @@ page{
   white-space: nowrap;
   animation: noticeRunning 15s linear infinite;
 }
+/* 跑马灯动画 */
 @keyframes noticeRunning{
   from{
     transform: translateX(100%);
@@ -161,8 +162,8 @@ page{
   display: flex;
 }
 .teachers view image{
-  width: 80rpx;
-  height: 80rpx;
+  width: 40px;
+  height: 40px;
   align-self: center;
   margin-right: 20rpx;
 }
@@ -181,7 +182,34 @@ page{
 .opacity{
   opacity: 0.3;
 }
-
+.buttons{
+  display: flex;
+  width: 100%;
+  height: 20vh;
+  background-color: #ffffff;
+}
+.buttons view{
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+}
+.buttons view image{
+  width: 36px;
+  height: 36px;
+}
+.buttons view text{
+  color: red;
+  margin-top: 20rpx;
+}
+.return{
+  border-right: 1px solid #EEE5DE;
+}
+.finalSubmit{
+  border-left: 1px solid #EEE5DE;
+}
 @media screen and (min-height: 900px) {
   .teachers-msg{
     width: 400rpx;

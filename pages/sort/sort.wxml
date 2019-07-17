@@ -42,3 +42,13 @@
     <image class="{{ index==4 ? 'opacity' : ''}}" id="down" src="../../static/img/down.png"></image>
   </view>
 </view>
+<view class="buttons">
+  <view class="return">
+    <image src="../../static/img/return.png"></image>
+    <text>重新选择导师</text>
+  </view>
+  <view class="finalSubmit">
+    <image src="../../static/img/finalsubmit.png"></image>
+    <text>提交最终选择</text>
+  </view>
+</view>
